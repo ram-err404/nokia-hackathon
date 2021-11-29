@@ -1,0 +1,39 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mediationxapp2
+  namespace: default
+  labels:
+    app: mediationxapp2  # give as per service.yaml
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mediationxapp2 # give as per service.yaml
+  template:
+    metadata:
+      labels:
+        app: mediationxapp2
+    spec:
+      containers:
+      - name: mediationxapp2
+        image: mediationxapp2:latest
+        imagePullPolicy: Never
+        command: ["/app/mediationxapp2"]
+        ports:
+        - containerPort: 9002 # use the same port ref values.yaml
+
+---
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mediationxapp2
+  namespace: default
+spec:
+  type: ClusterIP
+  ports:
+    - port: 9002
+      targetPort: 9002
+  selector:
+    app: mediationxapp2
