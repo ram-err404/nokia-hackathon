@@ -34,4 +34,4 @@ We developed an auto scaling micro-service that scale up or down the pods based 
 >>c) If API rate crosses the configured threshold value. It scale out corresponding mediation xApp and scale in if API rate falls lower than 25% of threshold values.
 
 
-#### For more detailed description refer the attached ppt present at: 
+#### For more detailed description refer presentation: EuphoriaHackathon - A Team.pptx 
