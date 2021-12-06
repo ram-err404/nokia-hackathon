@@ -1,5 +1,5 @@
 # Nokia-Hackathon
-We developed an auto scaling micro-service that scale up or down the pods based on the increase/decrease in API requests from mediation xApps.
+We have developed an auto scaling micro-service that scales up or down the pods based on the increase/decrease in API requests from mediation xApps.
 
 ### Team Name: 
 > The A-Team
